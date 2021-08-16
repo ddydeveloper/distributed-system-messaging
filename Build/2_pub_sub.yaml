@@ -1,0 +1,13 @@
+producer_path: 2_PubSub\Publisher\Publisher.csproj
+consumer_path: 2_PubSub\Consumer\Consumer.csproj
+consumers:
+  - SpbDotNet_channel
+  - Attendee_inbox
+messages:
+  - See you today at 18:30
+  - Meetup starts at 19:00
+  - We have a break at 20:00
+  - We continue at 20:30
+  - We go to bar at 21:30
+  - We go to home any time you prefer
+  - See you next time!

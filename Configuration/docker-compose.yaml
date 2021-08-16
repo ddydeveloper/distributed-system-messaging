@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+    rabbitmq:
+        restart: always
+        image: rabbitmq:3-management
+        volumes:
+            - ./rabbitmq/etc/definitions.json:/etc/rabbitmq/definitions.json
+            - ./rabbitmq/data:/var/lib/rabbitmq/mnesia/rabbit@my-rabbit
+            - ./rabbitmq/logs:/var/log/rabbitmq/log
+        ports:
+            - 5672:5672
+            - 15672:15672
+
+    mssql-server-linux:
+        restart: always
+        image: microsoft/mssql-server-linux:latest
+        volumes:
+            - ./sql:/mssqldata
+        environment:
+            ACCEPT_EULA: "Y"
+            SA_PASSWORD: "[Your_Password]"
+        ports:
+            - "1433:1433"
+
+    seq:
+        restart: always
+        image: datalust/seq:latest
+        volumes:
+            - ./seq/data:/data
+        environment:
+            - ACCEPT_EULA=Y
+        ports:
+            - 5341:5341
+            - 8005:80

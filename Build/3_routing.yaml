@@ -1,0 +1,16 @@
+producer_path: 3_Routing\Publisher\Publisher.csproj
+consumer_path: 3_Routing\Consumer\Consumer.csproj
+consumers:
+  - Alexey_Merson_(Trainer) speaker
+  - Igor_Labutin_(Organizer) sponsor
+messages:
+  - sponsor Arcadia
+  - speaker Ivanova Anna
+  - speaker Egorov Andrey
+  - sponsor JetBrains
+  - speaker Baranov Sergey
+  - sponsor EPAM
+  - sponsor Microsoft
+  - speaker Andreev Egor
+  - speaker Koltsov Denis
+  - sponsor Google

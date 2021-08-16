@@ -1,0 +1,16 @@
+producer_path: 4_Topics\Publisher\Publisher.csproj
+consumer_path: 4_Topics\Consumer\Consumer.csproj
+consumers:
+  - 'Anatoly_Kulakov_(Trainer) ru.*.*'
+  - 'Igor_Labutin_(Trainer) *.performance.*'
+messages:
+  - en.performance.man Scott Black
+  - ru.blazor.woman Anastasia Petrova
+  - ru.monitoring.woman Daria Kovaleva
+  - en.performance.man Andrew Lock
+  - ru.performance.woman Liza Simonova
+  - ru.async.man Eugene Pirogov
+  - ru.internals.man Denis Kovalev
+  - en.blazor.woman Anna Henderson
+  - ru.performance.man Kirill Ivanov
+  - en.performance.woman Maria Novoseltseva

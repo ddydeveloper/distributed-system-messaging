@@ -1,0 +1,16 @@
+producer_path: 1_WorkerQueues\Publisher\Publisher.csproj
+consumer_path: 1_WorkerQueues\Worker\Worker.csproj
+consumers:
+  - Anatoly_Kulakov_(Trainer)
+  - Alexey_Merson_(Trainer)
+messages:
+  - Ivanova Anna..................
+  - Andreev Egor
+  - Semenov Alex
+  - Baranov Sergey
+  - Egorov Andrey
+  - Sidorov Albert
+  - Kulikov Max
+  - Nemov Eugene
+  - Starykh Kirill
+  - Koltsov Denis
