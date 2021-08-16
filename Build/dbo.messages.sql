@@ -1,0 +1,1 @@
+CREATE TABLE dbo.messages ([content] nvarchar(max));
