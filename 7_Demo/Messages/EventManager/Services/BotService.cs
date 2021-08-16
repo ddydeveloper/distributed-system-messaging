@@ -76,11 +76,8 @@ namespace EventManager.Services
 
         public async Task MeetupIsOver(long chatId, DateTime dateTime)
         {
-            if ((dateTime - DateTime.Now).Days < 0)
-            {
-                throw new InvalidOperationException("Meetup is in the past.");
-            }
-            
+            if ((dateTime - DateTime.Now).Days < 0) throw new InvalidOperationException("Meetup is in the past.");
+
             await _dbService.InsertContent($"{nameof(MeetupIsOver)} {dateTime}");
 
             _logger.LogInformation($"Received message: {nameof(MeetupIsOver)}, chatId: {chatId}.");

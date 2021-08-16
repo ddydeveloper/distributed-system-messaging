@@ -48,7 +48,7 @@ namespace Audience
                        $"{Environment.NewLine}{Environment.NewLine}{message.SpeakerFullName} ({message.SpeakerInfo}) " +
                        $"{Environment.NewLine}will present a topic \"{message.TopicName}\".";
 
-                       await _bot.SendTextMessageAsync(_config.GetChannel(), text);
+            await _bot.SendTextMessageAsync(_config.GetChannel(), text);
         }
     }
 

@@ -24,7 +24,7 @@ namespace Messages.Extensions
             var token = configuration.GetConnectionString("BotToken");
             return token;
         }
-        
+
         public static string GetChannel(this IConfiguration configuration)
         {
             return configuration.GetConnectionString("Channel");

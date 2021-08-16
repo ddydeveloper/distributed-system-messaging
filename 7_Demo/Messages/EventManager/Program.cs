@@ -2,7 +2,6 @@ using EventManager.Models;
 using EventManager.Services;
 using Events;
 using Messages.Extensions;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Rebus.Config;

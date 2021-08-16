@@ -30,10 +30,7 @@ namespace EventManager
 
         private async void Bot_OnMessage(object? sender, MessageEventArgs e)
         {
-            if (e.Message.Text is null)
-            {
-                return;
-            }
+            if (e.Message.Text is null) return;
 
             var chatId = e.Message.Chat.Id;
             var text = e.Message.Text;
@@ -54,14 +51,16 @@ namespace EventManager
                 case "MeetupAnnounced":
                 {
                     var timeParts = args[5].Split('-');
-                    var dateTime = new DateTime(int.Parse(timeParts[2]), int.Parse(timeParts[1]), int.Parse(timeParts[0]));
+                    var dateTime = new DateTime(int.Parse(timeParts[2]), int.Parse(timeParts[1]),
+                        int.Parse(timeParts[0]));
                     await _botService.MeetupAnnounced(chatId, args[1], args[2], args[3], args[4], dateTime);
                     break;
                 }
                 case "MeetupIsOver":
                 {
                     var timeParts = args[1].Split('-');
-                    var dateTime = new DateTime(int.Parse(timeParts[2]), int.Parse(timeParts[1]), int.Parse(timeParts[0]));
+                    var dateTime = new DateTime(int.Parse(timeParts[2]), int.Parse(timeParts[1]),
+                        int.Parse(timeParts[0]));
                     await _botService.MeetupIsOver(chatId, dateTime);
                     break;
                 }

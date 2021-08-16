@@ -46,7 +46,7 @@ namespace Worker
                 Console.WriteLine($"New speaker applied: {text}");
                 Thread.Sleep(dots * 1000);
                 Console.WriteLine($"[x] Handled {(dots > 0 ? dots : 1)} hours later.\n");
-                
+
                 ((EventingBasicConsumer) sender)?.Model.BasicAck(ea.DeliveryTag, false);
             };
 
